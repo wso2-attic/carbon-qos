@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+        <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>caching</artifactId>
+        <version>4.3.0-SNAPSHOT</version>
+	<relativePath>../pom.xml</relativePath>
+        </parent>    
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>org.wso2.carbon.caching.core</artifactId>
+    <packaging>bundle</packaging>
+    <name>WSO2 Caching - Core</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-saaj_1.3_spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-saaj</artifactId>
+        </dependency>
+
+        <!-- AXIOM Dependencies -->
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-impl</artifactId>
+            <version>${axiom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-api</artifactId>
+            <version>${axiom.version}</version>
+        </dependency>
+        <!-- Neethi jar for the policy processor -->
+        <dependency>
+            <groupId>org.apache.neethi.wso2</groupId>
+            <artifactId>neethi</artifactId>
+            <version>${orbit.version.neethi}</version>
+        </dependency>
+        <!-- Thrid party dependencies -->
+        <dependency>
+            <groupId>xmlunit</groupId>
+            <artifactId>xmlunit</artifactId>
+            <version>${version.xmlunit}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+           <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Name>${project.artifactId}</Bundle-Name>
+			<Axis2Module>${project.artifactId}-${project.version}</Axis2Module>
+                        <Bundle-Description>
+                            ${pom.description}
+                        </Bundle-Description>
+                        <Export-Package>
+                            org.wso2.carbon.caching.core.*,
+                            org.wso2.carbon.caching.module.*,
+                        </Export-Package>
+                        <Import-Package>
+                            !org.wso2.carbon.caching.core.*,
+                            org.apache.axiom.*; version="${axiom.osgi.version.range.caching}",
+                            org.apache.neethi.*; version="${neethi.osgi.version.range.caching}",
+                            javax.xml.stream.*; version="1.0.1",
+                            *;resolution:=optional
+                        </Import-Package>
+                        <DynamicImport-Package>*</DynamicImport-Package>
+                        <Embed-Dependency>
+                            geronimo-saaj_1.3_spec;scope=compile|runtime;inline=true;
+                            axis2-saaj;scope=compile|runtime;inline=true;
+                        </Embed-Dependency>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

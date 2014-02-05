@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ~ Copyright (c) 2009-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~      http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>carbon-components</artifactId>
+        <version>4.3.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>throttling</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Throttling Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+        <module>org.wso2.carbon.throttle</module>
+        <module>org.wso2.carbon.throttle.core</module>
+        <module>org.wso2.carbon.throttle.ui</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.wso2.throttle</groupId>
+                <artifactId>wso2throttle-core</artifactId>
+                <version>${wso2throttle.version.throttling}</version>
+            </dependency>
+	    <dependency>
+            	<groupId>org.wso2.throttle</groupId>
+            	<artifactId>wso2throttle</artifactId>
+                <version>${wso2throttle.version.throttling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.core</artifactId>
+                <version>${wso2carbon.version.throttling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.axis2.wso2</groupId>
+                <artifactId>axis2</artifactId>
+                <version>${axis2.wso2.version.throttling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.utils</artifactId>
+                <version>${wso2carbon.version.throttling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.ui</artifactId>
+                <version>${wso2carbon.version.throttling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.registry.core</artifactId>
+                <version>${wso2carbon.version.throttling}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <wso2throttle.version.throttling>${wso2throttle.version}</wso2throttle.version.throttling>
+        <axis2.wso2.version.throttling>${axis2.wso2.version}</axis2.wso2.version.throttling>
+        <wso2carbon.version.throttling>${wso2carbon.version}</wso2carbon.version.throttling>
+        <axis2.osgi.version.range.throttling>${axis2.osgi.version.range}</axis2.osgi.version.range.throttling>
+        <axiom.osgi.version.range.throttling>${axiom.osgi.version.range}</axiom.osgi.version.range.throttling>
+        <neethi.osgi.version.range.throttling>${neethi.osgi.version.range}</neethi.osgi.version.range.throttling>
+    </properties>
+
+</project>
