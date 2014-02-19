@@ -34,12 +34,10 @@
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.core</artifactId>
-            <version>${carbon.platform.version}</version>
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.caching.core</artifactId>
-            <version>${carbon.platform.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
@@ -70,7 +68,6 @@
                         <Import-Package>
                             org.wso2.carbon.caching.core.*,
                             org.wso2.carbon.caching.module.*,
-
                             *;resolution:=optional
                         </Import-Package>
                     </instructions>

@@ -62,7 +62,6 @@
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.ui</artifactId>
-	    <version>${carbon.platform.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.wso2.carbon</groupId>
@@ -77,7 +76,6 @@
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.caching.stub</artifactId>
-	    <version>${carbon.platform.version}</version>
         </dependency>
     </dependencies>
 

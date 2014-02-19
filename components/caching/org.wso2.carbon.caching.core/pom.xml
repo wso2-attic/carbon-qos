@@ -30,26 +30,20 @@
 
         <!-- AXIOM Dependencies -->
         <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-impl</artifactId>
-            <version>${axiom.version}</version>
+            <groupId>org.apache.ws.commons.axiom.wso2</groupId>
+            <artifactId>axiom</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-api</artifactId>
-            <version>${axiom.version}</version>
-        </dependency>
+
         <!-- Neethi jar for the policy processor -->
         <dependency>
             <groupId>org.apache.neethi.wso2</groupId>
             <artifactId>neethi</artifactId>
-            <version>${orbit.version.neethi}</version>
         </dependency>
-        <!-- Thrid party dependencies -->
+
+        <!-- Third party dependencies -->
         <dependency>
             <groupId>xmlunit</groupId>
             <artifactId>xmlunit</artifactId>
-            <version>${version.xmlunit}</version>
         </dependency>
     </dependencies>
     <build>
@@ -57,7 +51,6 @@
            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.0.2</version>
                 <configuration>
                     <source>1.5</source>
                     <target>1.5</target>

@@ -21,8 +21,9 @@
 
     <parent>
         <groupId>org.wso2.carbon</groupId>
-        <artifactId>carbon-components</artifactId>
+        <artifactId>carbon-qos</artifactId>
         <version>4.3.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -39,65 +40,5 @@
         <module>org.wso2.carbon.rm</module>
         <module>org.wso2.carbon.rm.ui</module>
     </modules>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.wso2.carbon</groupId>
-                <artifactId>org.wso2.carbon.core</artifactId>
-                <version>${wso2carbon.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon</groupId>
-                <artifactId>org.wso2.carbon.ui</artifactId>
-                <version>${wso2carbon.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.axis2.wso2</groupId>
-                <artifactId>axis2</artifactId>
-                <version>${axis2.wso2.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon</groupId>
-                <artifactId>org.wso2.carbon.utils</artifactId>
-                <version>${wso2carbon.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sandesha2</groupId>
-                <artifactId>sandesha2</artifactId>
-                <version>${sandesha2.version.reliable-messaging}</version>
-                <type>mar</type>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sandesha2</groupId>
-                <artifactId>sandesha2-core</artifactId>
-                <version>${sandesha2.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sandesha2</groupId>
-                <artifactId>sandesha2-policy</artifactId>
-                <version>${sandesha2.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sandesha2</groupId>
-                <artifactId>sandesha2-rampart-integration</artifactId>
-                <version>${sandesha2.version.reliable-messaging}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.sandesha2</groupId>
-                <artifactId>sandesha2-persistence</artifactId>
-                <version>${sandesha2.version.reliable-messaging}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <properties>
-        <sandesha2.version.reliable-messaging>${sandesha2.version}</sandesha2.version.reliable-messaging>
-        <axis2.wso2.version.reliable-messaging>${axis2.wso2.version}</axis2.wso2.version.reliable-messaging>
-        <axis2.osgi.version.range.reliable-messaging>${axis2.osgi.version.range}</axis2.osgi.version.range.reliable-messaging>
-        <axiom.osgi.version.range.reliable-messaging>${axiom.osgi.version.range}</axiom.osgi.version.range.reliable-messaging>
-        <neethi.osgi.version.range.reliable-messaging>${neethi.osgi.version.range}</neethi.osgi.version.range.reliable-messaging>
-        <wso2carbon.version.reliable-messaging>${wso2carbon.version}</wso2carbon.version.reliable-messaging>
-    </properties>
 
 </project>
