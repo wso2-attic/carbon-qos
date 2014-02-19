@@ -411,6 +411,18 @@
                 <enabled>false</enabled>
             </releases>
         </repository>
+
+        <repository>
+            <id>open-saml</id>
+            <url>http://shibboleth.internet2.edu/downloads/maven2/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
     </repositories>
 
 
