@@ -183,10 +183,8 @@
                 <artifactId>org.wso2.carbon.throttle.stub</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
-
 
     <build>
         <extensions>
