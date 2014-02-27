@@ -354,7 +354,7 @@
         <wso2throttle.version>3.3.0</wso2throttle.version>
 
         <!-- Rampart Version -->
-        <rampart.wso2.version>1.6.1.wso2v9</rampart.wso2.version>
+        <rampart.wso2.version>1.6.1.wso2v12</rampart.wso2.version>
 
         <!-- JSON Version -->
         <orbit.version.json>2.0.0.wso2v1</orbit.version.json>
@@ -371,7 +371,7 @@
         <woodstox.version>3.2.9</woodstox.version>
         <xml-apis.version>1.3.04</xml-apis.version>
         <wsdl4j.wso2.version>1.6.2.wso2v4</wsdl4j.wso2.version>
-        <wss4j.version>1.6.11</wss4j.version>
+        <wss4j.version>1.5.11.wso2v7-SNAPSHOT</wss4j.version>
 
         <exp.pkg.version.javax.servlet.jsp>2.2.0</exp.pkg.version.javax.servlet.jsp>
         <imp.pkg.version.javax.servlet.jsp>[2.2.0, 2.3.0)</imp.pkg.version.javax.servlet.jsp>
