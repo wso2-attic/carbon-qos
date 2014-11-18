@@ -332,8 +332,8 @@
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
 
         <!-- Axiom Version -->
-        <axiom.wso2.version>1.2.11.wso2v5-SNAPSHOT</axiom.wso2.version>
-        <axiom.version>1.2.11-wso2v5-SNAPSHOT</axiom.version>
+        <axiom.wso2.version>1.2.11.wso2v5</axiom.wso2.version>
+        <axiom.version>1.2.11-wso2v5</axiom.version>
         <axiom.osgi.version.range>[1.2.11.wso2v5, 1.3.0)</axiom.osgi.version.range>
 
         <!-- Axis2 Version -->
