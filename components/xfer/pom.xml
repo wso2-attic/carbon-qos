@@ -36,40 +36,37 @@
         <module>org.wso2.carbon.xfer</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.wso2.xfer</groupId>
-                <artifactId>wso2xfer</artifactId>
-                <version>${wso2xfer.version.xfer}</version>
-                <type>mar</type>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.axis2</groupId>
-                        <artifactId>axis2</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.xfer</groupId>
-                <artifactId>wso2xfer</artifactId>
-                <version>${wso2xfer.version.xfer}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.axis2</groupId>
-                        <artifactId>axis2</artifactId>
-                    </exclusion>
-                </exclusions>
-                <type>jar</type>
-            </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.xfer</groupId>
+            <artifactId>wso2xfer</artifactId>
+            <version>${wso2xfer.version.xfer}</version>
+            <type>mar</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.axis2</groupId>
+                    <artifactId>axis2</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.xfer</groupId>
+            <artifactId>wso2xfer</artifactId>
+            <version>${wso2xfer.version.xfer}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.axis2</groupId>
+                    <artifactId>axis2</artifactId>
+                </exclusion>
+            </exclusions>
+            <type>jar</type>
+        </dependency>
 
-            <dependency>
-                <groupId>org.wso2.carbon</groupId>
-                <artifactId>org.wso2.carbon.utils</artifactId>
-                <version>${wso2carbon.version.xfer}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    </dependencies>
 
     <properties>
         <wso2carbon.version.xfer>${wso2carbon.version}</wso2carbon.version.xfer>
