@@ -20,7 +20,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
-        <groupId>org.wso2.carbon</groupId>
+        <groupId>org.wso2.carbon.qos</groupId>
         <artifactId>throttle-feature</artifactId>
         <version>4.3.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -35,12 +35,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.wso2.carbon</groupId>
+            <groupId>org.wso2.carbon.qos</groupId>
             <artifactId>org.wso2.carbon.throttle</artifactId>
             <version>4.3.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon</groupId>
+            <groupId>org.wso2.carbon.qos</groupId>
             <artifactId>org.wso2.carbon.throttle.core</artifactId>
             <version>4.3.0-SNAPSHOT</version>
         </dependency>
@@ -69,8 +69,8 @@
                                 </properties>
                             </adviceFile>
                             <bundles>
-                                <bundleDef>org.wso2.carbon:org.wso2.carbon.throttle</bundleDef>
-                                <bundleDef>org.wso2.carbon:org.wso2.carbon.throttle.core</bundleDef>
+                                <bundleDef>org.wso2.carbon.qos:org.wso2.carbon.throttle</bundleDef>
+                                <bundleDef>org.wso2.carbon.qos:org.wso2.carbon.throttle.core</bundleDef>
                             </bundles>
                             <importFeatures>
                                 <importFeatureDef>org.wso2.carbon.core.server:${carbon.kernel.version}</importFeatureDef>
